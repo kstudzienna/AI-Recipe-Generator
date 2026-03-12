@@ -238,6 +238,7 @@ Sztuczna inteligencja została wykorzystana w dwóch obszarach:
 
 # Autorzy
 Karolina Studzienna, Kamil Jarzyna, Kacper Kulon, Michał Neubauer
+
 Projekt realizowany w ramach przedmiotu:
 
 **Budowa i administracja aplikacji w chmurze**
