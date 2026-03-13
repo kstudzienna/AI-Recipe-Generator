@@ -1,0 +1,4 @@
+recipe-service:
+  build: ./services/recipe-service
+  environment:
+    OPENAI_API_KEY: ${OPENAI_API_KEY}
