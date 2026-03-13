@@ -1,4 +1,29 @@
-recipe-service:
-  build: ./services/recipe-service
-  environment:
-    OPENAI_API_KEY: ${OPENAI_API_KEY}
+version: "3.9"
+
+services:
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - auth-service
+      - ingredient-service
+      - recipe-service
+
+  auth-service:
+    build: ./services/auth-service
+    ports:
+      - "8001:8000"
+
+  ingredient-service:
+    build: ./services/ingredient-service
+    ports:
+      - "8002:8000"
+
+  recipe-service:
+    build: ./services/recipe-service
+    ports:
+      - "8003:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
